@@ -1,0 +1,787 @@
+/* ENCY Partner Program — Sixshop scoped stylesheet
+   Generated from ency_partner_program_final_with_equipment_visuals.html
+   All landing-page presentation rules are scoped under #ency-partner-app. */
+
+#ency-partner-app{--bg:#f5f6f4;--paper:#fff;--ink:#101214;--muted:#697075;--line:#e1e3e2;--green:#01cb9b;--blue:#2d54d5;--r:26px}
+#ency-partner-app *{box-sizing:border-box}#ency-partner-app{scroll-behavior:smooth}#ency-partner-app{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;word-break:keep-all}
+#ency-partner-app a{color:inherit;text-decoration:none}#ency-partner-app .wrap{width:min(1180px,calc(100% - 56px));margin:auto}#ency-partner-app .section{padding:92px 0}#ency-partner-app .white{background:#fff}
+#ency-partner-app .kicker{font-size:12px;letter-spacing:.14em;font-weight:700;color:#777e83;margin-bottom:18px}#ency-partner-app .h1{font-size:clamp(42px,3.55vw,64px);line-height:1.12;letter-spacing:-.05em;margin:0;font-weight:720}#ency-partner-app .h2{font-size:clamp(36px,3.7vw,56px);line-height:1.12;letter-spacing:-.05em;margin:0}#ency-partner-app .desc{color:var(--muted);font-size:16px;line-height:1.72}
+#ency-partner-app .grad{background:linear-gradient(105deg,var(--green),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+#ency-partner-app .actions{display:flex;gap:10px;flex-wrap:wrap}#ency-partner-app .actions.center{justify-content:center}#ency-partner-app .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:#111;color:#fff;padding:15px 23px;border-radius:999px;font-weight:700;font-size:14px}#ency-partner-app .btn:after{content:"↗"}#ency-partner-app .btn.secondary{background:#fff;color:#111;border:1px solid #d6d9d8}#ency-partner-app .pill{display:inline-flex;padding:8px 12px;border:1px solid #d9dcde;border-radius:999px;font-size:12px;background:#fff}
+
+/* HERO */
+#ency-partner-app .hero{min-height:690px;height:min(790px,calc(100vh - 40px));display:flex;align-items:center;position:relative;overflow:hidden;background:#f7f8f6;text-align:center;border-bottom:1px solid #e3e5e4}
+#ency-partner-app .hero:before, #ency-partner-app .hero:after{content:"";position:absolute;pointer-events:none}
+#ency-partner-app .hero:before{width:760px;height:760px;border:1px solid rgba(45,84,213,.08);border-radius:50%;left:50%;top:51%;transform:translate(-50%,-50%);box-shadow:0 0 0 110px rgba(1,203,155,.018),0 0 0 220px rgba(45,84,213,.014)}
+#ency-partner-app .hero:after{inset:0;background:linear-gradient(rgba(45,84,213,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(1,203,155,.022) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,transparent 5%,#000 35%,#000 65%,transparent 95%)}
+#ency-partner-app .hero-lines{position:absolute;inset:0;opacity:.28;pointer-events:none}#ency-partner-app .hero-lines svg{width:100%;height:100%}
+#ency-partner-app .hero-inner{position:relative;z-index:2;width:100%;padding:60px 0}#ency-partner-app .hero-copy{max-width:900px;margin:auto}#ency-partner-app .hero .h1{font-size:clamp(42px,3.45vw,62px)}
+#ency-partner-app .hero-sub{font-size:16px;line-height:1.68;color:#60676b;max-width:610px;margin:22px auto 27px}
+
+/* WHY DEALER */
+#ency-partner-app .why{border-bottom:1px solid #e3e5e4}#ency-partner-app .why-head{max-width:1000px}#ency-partner-app .why-head .desc{max-width:1020px;margin:22px 0 0}
+#ency-partner-app .why-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:42px}#ency-partner-app .why-card{background:#fff;border:1px solid #dfe1e1;border-radius:24px;padding:26px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between}#ency-partner-app .why-card .num{font-size:11px;color:#999}#ency-partner-app .why-card h3{font-size:24px;letter-spacing:-.04em;margin:0 0 10px}#ency-partner-app .why-card p{font-size:13px;line-height:1.68;color:#73797e;margin:0}
+#ency-partner-app .quick-support{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}#ency-partner-app .quick{background:#eceeed;border-radius:18px;padding:18px 20px;min-height:78px}#ency-partner-app .quick strong{font-size:13px;display:block;margin-bottom:5px}#ency-partner-app .quick span{font-size:11px;color:#7a8185;line-height:1.5}
+#ency-partner-app .fields{margin-top:20px;display:flex;gap:7px;flex-wrap:wrap}
+
+/* PARTNER TYPES */
+#ency-partner-app .role{background:#111;color:#fff}#ency-partner-app .role .desc{color:#afb4b7}#ency-partner-app .role-head{text-align:center;max-width:900px;margin:auto}#ency-partner-app .partner-types{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:48px}#ency-partner-app .ptype{border:1px solid #303438;border-radius:28px;padding:34px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between}#ency-partner-app .ptype .type-title{font-size:clamp(27px,2.4vw,38px);font-weight:760;letter-spacing:-.045em;line-height:1.1}#ency-partner-app .ptype .type-title small{display:block;color:#7f868a;font-size:12px;letter-spacing:.1em;margin-bottom:12px}#ency-partner-app .ptype strong{display:block;font-size:21px;margin:22px 0 9px}#ency-partner-app .ptype p{margin:0;color:#aeb3b6;font-size:14px;line-height:1.72}
+
+/* SUPPORT */
+#ency-partner-app .support-head{max-width:850px}#ency-partner-app .support-row{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:42px}#ency-partner-app .support-card{background:#fff;border:1px solid #e0e1e1;border-radius:22px;padding:24px 20px;min-height:220px;display:flex;flex-direction:column}#ency-partner-app .support-icon{width:34px;height:34px;border-radius:50%;border:1px solid #d8dcdb;display:grid;place-items:center;font-size:15px;margin-bottom:44px}#ency-partner-app .support-card h3{font-size:18px;line-height:1.3;margin:0 0 10px}#ency-partner-app .support-card p{font-size:12px;line-height:1.65;color:#73797e;margin:0}
+
+/* WHY ENCY + FUTURE */
+#ency-partner-app .product-section{background:#fff}#ency-partner-app .product-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:54px;align-items:center}#ency-partner-app .visual{min-height:490px;border-radius:30px;background:#17191b;color:#fff;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:26px}#ency-partner-app .visual:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(1,203,155,.16),transparent 40%,rgba(45,84,213,.2))}#ency-partner-app .visual span{position:relative;color:#aeb4b7;font-size:12px}#ency-partner-app .product-copy h3{font-size:29px;margin:30px 0 10px}#ency-partner-app .flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1.35fr;align-items:center;gap:8px;margin-top:34px}#ency-partner-app .flow span{padding:13px 10px;border:1px solid #d5d8d9;border-radius:999px;background:#fff;font-weight:650;font-size:12px;text-align:center;white-space:nowrap}#ency-partner-app .flow i{font-style:normal;color:#9aa0a3}#ency-partner-app .product-actions{margin-top:28px}#ency-partner-app .product-note{font-size:13px;color:#747b7f;line-height:1.65;margin-top:22px}
+
+/* PROCESS */
+#ency-partner-app .join-head{text-align:center;max-width:900px;margin:auto}#ency-partner-app .join-head .desc{max-width:690px;margin:20px auto 0}#ency-partner-app .process{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:58px}#ency-partner-app .process:before{content:"";position:absolute;left:8.33%;right:8.33%;top:19px;height:1px;background:#c8ccce}#ency-partner-app .step{position:relative;text-align:center;padding:0 9px}#ency-partner-app .step b{position:relative;z-index:1;margin:0 auto 20px;width:40px;height:40px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;font-size:11px}#ency-partner-app .step strong{font-size:14px;display:block;margin-bottom:8px}#ency-partner-app .step p{font-size:11px;line-height:1.55;color:#858b8f;margin:0}#ency-partner-app .process-note{text-align:center;max-width:760px;margin:30px auto 0;color:#6f767a;font-size:13px;line-height:1.7}
+#ency-partner-app .faq{max-width:920px;margin:62px auto 0;background:#eceeed;border-radius:30px;padding:24px}#ency-partner-app .faq-item{background:#f8f9f8;border-radius:16px;margin:7px 0;overflow:hidden;border:1px solid #ddd}#ency-partner-app .faq-q{width:100%;border:0;background:transparent;padding:18px 20px;display:flex;justify-content:space-between;text-align:left;font:inherit;font-weight:650;cursor:pointer}#ency-partner-app .faq-a{display:none;padding:0 20px 20px;color:#687075;line-height:1.7;font-size:14px}#ency-partner-app .faq-item.open{background:#fff}#ency-partner-app .faq-item.open .faq-a{display:block}
+
+/* APPLY */
+#ency-partner-app .apply{padding-top:92px}#ency-partner-app .apply-head{text-align:center;max-width:980px;margin:0 auto 42px}#ency-partner-app .apply-head .h2{white-space:nowrap;font-size:clamp(36px,3.3vw,54px)}#ency-partner-app .apply-head .desc{margin:16px auto 0}#ency-partner-app .form-wrap{max-width:900px;margin:auto}#ency-partner-app .form{background:#fff;border:1px solid #e0e1e1;border-radius:28px;padding:40px}#ency-partner-app .field{margin-bottom:26px}#ency-partner-app .field label{display:block;font-size:13px;font-weight:650;margin-bottom:9px}#ency-partner-app .field input, #ency-partner-app .field textarea{width:100%;border:0;border-bottom:1px solid #cfd2d3;padding:11px 2px;background:transparent;font:inherit;outline:none}#ency-partner-app .field textarea{min-height:90px}#ency-partner-app .options{display:flex;gap:8px;flex-wrap:wrap}#ency-partner-app .options label{margin:0}#ency-partner-app .options input{display:none}#ency-partner-app .options span{display:inline-flex;padding:10px 14px;border:1px solid #cfd2d3;border-radius:999px;font-size:13px}#ency-partner-app .options input:checked+span{background:#111;color:#fff}#ency-partner-app .form button{border:0;cursor:pointer}#ency-partner-app .phone{text-align:center;margin-top:28px;color:#747a7e;font-size:13px;line-height:1.65}#ency-partner-app .phone a{display:inline-block;font-weight:750;color:#111;font-size:19px;margin-top:2px}
+
+/* FOOTER */
+#ency-partner-app .footer{background:#0c0e10;color:#fff;padding:58px 0}#ency-partner-app .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:36px}#ency-partner-app .footer h4{font-size:11px;color:#747a7e;margin:0 0 12px;text-transform:uppercase}#ency-partner-app .footer p{font-size:13px;line-height:1.75;color:#c2c5c7;margin:0}#ency-partner-app .copy{border-top:1px solid #25282a;margin-top:40px;padding-top:22px;color:#747a7e;font-size:12px}
+
+@media(max-width:1050px){#ency-partner-app .support-row{grid-template-columns:repeat(3,1fr)}#ency-partner-app .quick-support{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){#ency-partner-app .wrap{width:min(100% - 28px,1180px)}#ency-partner-app .section{padding:72px 0}#ency-partner-app .hero{height:auto;min-height:650px}#ency-partner-app .hero-inner{padding:80px 0}#ency-partner-app .why-grid3, #ency-partner-app .partner-types, #ency-partner-app .product-grid{grid-template-columns:1fr}#ency-partner-app .support-row{grid-template-columns:1fr 1fr}#ency-partner-app .process{grid-template-columns:repeat(3,1fr);gap:34px 0}#ency-partner-app .process:before{display:none}#ency-partner-app .step b{margin-bottom:14px}#ency-partner-app .footer-grid{grid-template-columns:1fr 1fr}#ency-partner-app .apply-head .h2{white-space:normal}#ency-partner-app .flow{grid-template-columns:1fr}#ency-partner-app .flow i{text-align:center;transform:rotate(90deg)}}
+@media(max-width:560px){#ency-partner-app .h1, #ency-partner-app .hero .h1{font-size:38px}#ency-partner-app .h2{font-size:34px}#ency-partner-app .hero-sub{font-size:15px}#ency-partner-app .hero{min-height:600px}#ency-partner-app .why-grid3, #ency-partner-app .quick-support, #ency-partner-app .support-row, #ency-partner-app .process, #ency-partner-app .footer-grid{grid-template-columns:1fr}#ency-partner-app .why-card{min-height:195px}#ency-partner-app .form{padding:28px 20px}}
+
+/* ===== V4 REVISED ===== */
+
+/* Hero: keep graphics below copy, with a very light brand gradient */
+#ency-partner-app .hero:before{
+  width:900px;height:430px;left:50%;top:auto;bottom:-250px;
+  transform:translateX(-50%);
+  border-color:rgba(45,84,213,.055);
+  box-shadow:0 0 0 100px rgba(1,203,155,.012),0 0 0 200px rgba(45,84,213,.010);
+}
+#ency-partner-app .hero:after{
+  opacity:.42;
+  mask-image:linear-gradient(to bottom,transparent 0%,transparent 55%,#000 82%,transparent 100%);
+}
+#ency-partner-app .hero-lines{top:auto;bottom:0;height:48%;opacity:.30}
+#ency-partner-app .hero-lines svg{height:100%}
+#ency-partner-app .hero-lines path:first-of-type{stroke:url(#heroGradient)!important}
+#ency-partner-app .hero-lines path:nth-of-type(2){stroke:url(#heroGradient)!important}
+
+/* Why: compact cards + numbered support cards */
+#ency-partner-app .why-head .pretitle{
+  font-size:clamp(23px,2.1vw,32px);font-weight:650;letter-spacing:-.04em;
+  margin:0 0 8px;color:#202326;line-height:1.2
+}
+#ency-partner-app .why-head .h2{font-size:clamp(39px,3.65vw,55px)}
+#ency-partner-app .why-grid3{margin-top:34px}
+#ency-partner-app .why-card{min-height:180px;padding:22px 24px}
+#ency-partner-app .why-card .num, #ency-partner-app .quick .qnum{
+  width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
+  font-size:10px;font-weight:750;color:#2d54d5;background:#eef4ff
+}
+#ency-partner-app .why-card h3{font-size:22px}
+#ency-partner-app .quick-support{grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+#ency-partner-app .quick{
+  background:#fff;border:1px solid #dfe1e1;border-radius:20px;padding:19px 20px;
+  min-height:118px;display:flex;flex-direction:column;justify-content:space-between
+}
+#ency-partner-app .quick .qnum{margin-bottom:20px;color:#2d54d5;background:#eef4ff}
+#ency-partner-app .quick strong{font-size:14px}
+#ency-partner-app .quick span{font-size:11px}
+
+/* subtle visual marks so the section is not text-only */
+#ency-partner-app .why-card .mini-mark{
+  width:34px;height:34px;border-radius:10px;border:1px solid #dfe4e3;
+  display:grid;place-items:center;margin-bottom:14px;font-size:15px
+}
+
+/* Dealer types */
+#ency-partner-app .role{
+  background:
+    radial-gradient(circle at 88% 15%,rgba(1,203,155,.17),transparent 27%),
+    radial-gradient(circle at 8% 90%,rgba(45,84,213,.20),transparent 30%),
+    linear-gradient(135deg,#11151c 0%,#101419 55%,#0d2521 100%)
+}
+#ency-partner-app .partner-types{gap:18px}
+#ency-partner-app .ptype{
+  position:relative;overflow:hidden;background:#fff;color:#111;border:0;min-height:315px
+}
+#ency-partner-app .ptype.agent{border-top:6px solid #2d7ff0}
+#ency-partner-app .ptype.reseller{border-top:6px solid #16b98a}
+#ency-partner-app .ptype.agent:after, #ency-partner-app .ptype.reseller:after{
+  content:"";position:absolute;width:180px;height:180px;border-radius:46% 54% 70% 30%;
+  right:-55px;bottom:-80px;transform:rotate(25deg)
+}
+#ency-partner-app .ptype.agent:after{background:linear-gradient(135deg,rgba(45,84,213,.08),rgba(45,127,240,.22))}
+#ency-partner-app .ptype.reseller:after{background:linear-gradient(135deg,rgba(1,203,155,.08),rgba(22,185,138,.24))}
+#ency-partner-app .ptype .type-title{color:#111}
+#ency-partner-app .ptype .type-title small{font-size:11px;margin-bottom:10px}
+#ency-partner-app .ptype.agent .type-title small{color:#2d7ff0}
+#ency-partner-app .ptype.reseller .type-title small{color:#0aa77d}
+#ency-partner-app .ptype p{color:#646b70;position:relative;z-index:1}
+#ency-partner-app .ptype strong{position:relative;z-index:1}
+#ency-partner-app .type-badge{
+  display:inline-flex;align-self:flex-start;padding:7px 12px;border-radius:999px;
+  font-size:11px;font-weight:750;margin-bottom:22px
+}
+#ency-partner-app .agent .type-badge{background:#edf5ff;color:#1f70da}
+#ency-partner-app .reseller .type-badge{background:#eafaf5;color:#078d6a}
+#ency-partner-app .type-list{list-style:none;padding:0;margin:16px 0 0;position:relative;z-index:1}
+#ency-partner-app .type-list li{font-size:13px;color:#60686d;margin:9px 0;padding-left:18px;position:relative}
+#ency-partner-app .type-list li:before{content:"";width:6px;height:6px;border-radius:50%;position:absolute;left:0;top:.55em}
+#ency-partner-app .agent .type-list li:before{background:#2d7ff0}
+#ency-partner-app .reseller .type-list li:before{background:#16b98a}
+
+/* Support - 5 identical cards in one row */
+#ency-partner-app .support-head .h2{font-size:clamp(36px,3.45vw,52px)}
+#ency-partner-app .support-row{grid-template-columns:repeat(5,minmax(0,1fr))}
+#ency-partner-app .support-card{min-height:205px;padding:22px 18px}
+#ency-partner-app .support-icon{margin-bottom:34px}
+
+/* Product/Future */
+#ency-partner-app .product-copy .h2{font-size:clamp(34px,3vw,48px);white-space:nowrap}
+#ency-partner-app .sub-emphasis{
+  display:inline-block;font-size:27px;font-weight:760;letter-spacing:-.04em;
+  margin:28px 0 8px;padding-bottom:5px;border-bottom:3px solid transparent;
+  border-image:linear-gradient(90deg,#01cb9b,#2d54d5) 1
+}
+#ency-partner-app .flow{grid-template-columns:1fr auto 1fr auto 1fr auto 1.4fr}
+#ency-partner-app .flow span{display:flex;align-items:center;justify-content:center;gap:8px}
+#ency-partner-app .product-logo-slot{
+  width:28px;height:28px;border-radius:7px;background:#111;color:#fff;
+  display:grid;place-items:center;font-size:9px;font-weight:800;flex:0 0 auto
+}
+#ency-partner-app .product-links{
+  display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:30px
+}
+#ency-partner-app .product-link{
+  display:inline-flex;align-items:center;gap:9px;padding:5px 0;
+  font-size:14px;font-weight:750;border-bottom:1px solid #111
+}
+#ency-partner-app .product-link.accent{border-bottom-color:#2d54d5;color:#204fb8}
+#ency-partner-app .product-link:after{content:"↗";font-size:12px}
+
+/* Process - force one-line title/copy on desktop */
+#ency-partner-app .join-head{max-width:1180px}
+#ency-partner-app .join-head .h2{font-size:clamp(36px,3.25vw,50px);white-space:nowrap}
+#ency-partner-app .join-head .desc{max-width:none;white-space:nowrap;font-size:14px}
+#ency-partner-app .process-note{max-width:none;white-space:nowrap}
+#ency-partner-app .step:last-child b{
+  background:linear-gradient(135deg,#01cb9b,#2d54d5);
+  box-shadow:0 7px 22px rgba(45,84,213,.20)
+}
+
+@media(max-width:1050px){
+  #ency-partner-app .support-row{grid-template-columns:repeat(5,minmax(0,1fr))}
+  #ency-partner-app .support-card{padding:18px 14px}#ency-partner-app .support-card h3{font-size:16px}
+}
+@media(max-width:900px){
+  #ency-partner-app .quick-support{grid-template-columns:1fr 1fr}
+  #ency-partner-app .support-row{grid-template-columns:1fr 1fr}
+  #ency-partner-app .product-copy .h2, #ency-partner-app .join-head .h2, #ency-partner-app .join-head .desc, #ency-partner-app .process-note{white-space:normal}
+}
+@media(max-width:560px){
+  #ency-partner-app .quick-support, #ency-partner-app .support-row{grid-template-columns:1fr}
+}
+
+#ency-partner-app .type-title .type-en{font-size:.62em;font-weight:650;color:#777f84;vertical-align:.08em}
+#ency-partner-app .phone .consult-name{display:inline-block;color:#111;font-size:16px;margin:5px 0 8px}
+#ency-partner-app .phone .contact-line{display:block;margin-top:3px}
+#ency-partner-app .phone .contact-line a{font-size:15px;margin:0 0 0 4px}
+
+#ency-partner-app .btn:after, #ency-partner-app .product-link:after{content:none!important}
+#ency-partner-app .hero-copy{max-width:1280px}#ency-partner-app .hero .h1{font-size:clamp(40px,3.35vw,60px);font-weight:760}#ency-partner-app .hero .h1 .hero-light{font-weight:380;color:#303438}
+#ency-partner-app .hero-sub{max-width:none;white-space:nowrap;font-size:15px}#ency-partner-app .hero-lines{height:100%;opacity:.46}#ency-partner-app .hero-lines .side-art{fill:none;stroke:url(#heroGradient);stroke-width:.8}#ency-partner-app .hero-lines .side-art-soft{fill:none;stroke:url(#heroGradient);stroke-width:.55;opacity:.7}#ency-partner-app .hero-lines .side-label{font:500 12px Pretendard,sans-serif;fill:#55706d;opacity:.38;letter-spacing:.08em}
+#ency-partner-app .why-head .pretitle{display:none}#ency-partner-app .why-head .h2{font-size:clamp(31px,2.7vw,43px);font-weight:400}#ency-partner-app .why-head .h2 .grad{font-weight:430}#ency-partner-app .why-head .desc{margin-top:20px}
+#ency-partner-app .dealer-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:34px}#ency-partner-app .dealer-benefit{background:#fff;border:1px solid #dfe1e1;border-radius:21px;padding:21px 22px;min-height:150px;display:flex;flex-direction:column;justify-content:space-between}#ency-partner-app .dealer-benefit .num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#eef4ff;color:#2d54d5;font-size:10px;font-weight:750}#ency-partner-app .dealer-benefit h3{font-size:20px;letter-spacing:-.035em;margin:22px 0 7px}#ency-partner-app .dealer-benefit p{font-size:12px;line-height:1.62;color:#747b7f;margin:0}#ency-partner-app .fields, #ency-partner-app .why-grid3, #ency-partner-app .quick-support{display:none!important}
+#ency-partner-app .role-head .h2{font-size:clamp(35px,3.25vw,50px)}#ency-partner-app .ptype{min-height:295px}
+#ency-partner-app .support-head{max-width:1000px}#ency-partner-app .support-head .h2{font-size:clamp(31px,2.75vw,43px);font-weight:400}#ency-partner-app .support-head .h2 .grad{font-weight:430}#ency-partner-app .package-title{font-size:13px;font-weight:750;letter-spacing:.13em;color:#2d54d5;margin-bottom:15px}#ency-partner-app .support-row{grid-template-columns:repeat(3,1fr);gap:10px}#ency-partner-app .support-card{min-height:170px;padding:21px 22px}#ency-partner-app .support-icon{margin-bottom:24px}#ency-partner-app .support-card h3{font-size:18px}
+#ency-partner-app .flow{grid-template-columns:repeat(7,max-content);justify-content:start}#ency-partner-app .flow span, #ency-partner-app .flow span:last-child{width:150px;height:68px}#ency-partner-app .product-logo-slot{width:32px;height:32px;border-radius:8px}
+#ency-partner-app .phone{max-width:900px;margin:12px auto 0!important;border:1px solid #e0e1e1;background:#fff;border-radius:18px;padding:16px 22px!important;display:flex;align-items:center;justify-content:center;gap:18px;text-align:left!important;color:#111!important}#ency-partner-app .phone .consult-label{font-size:12px;color:#7a8084}#ency-partner-app .phone .consult-name{margin:0!important;font-size:14px!important}#ency-partner-app .phone .contact-line{display:inline-flex!important;align-items:center;margin:0!important;padding-left:18px;border-left:1px solid #e0e1e1}#ency-partner-app .phone .contact-line a{font-size:14px!important}
+@media(max-width:1050px){#ency-partner-app .hero-sub{white-space:normal}#ency-partner-app .dealer-benefits{grid-template-columns:repeat(2,1fr)}#ency-partner-app .flow{grid-template-columns:1fr}#ency-partner-app .flow span, #ency-partner-app .flow span:last-child{width:100%}#ency-partner-app .flow>i{text-align:center;transform:rotate(90deg)}}@media(max-width:700px){#ency-partner-app .dealer-benefits, #ency-partner-app .support-row{grid-template-columns:1fr}#ency-partner-app .phone{flex-direction:column;gap:7px;text-align:center!important}#ency-partner-app .phone .contact-line{border-left:0;padding-left:0}}
+
+/* ===== V6 ===== */
+
+/* Hero side graphics: no labels, stronger visibility but still outside copy */
+#ency-partner-app .hero-lines{opacity:.72}
+#ency-partner-app .hero-lines .side-art{stroke-width:1.05}
+#ency-partner-app .hero-lines .side-art-soft{stroke-width:.75;opacity:.82}
+
+/* Keep benefit card contents aligned consistently */
+#ency-partner-app .dealer-benefit{min-height:158px}
+#ency-partner-app .dealer-benefit>div{min-height:73px}
+#ency-partner-app .dealer-benefit h3{margin:0 0 7px}
+
+/* Partner card breathing room */
+#ency-partner-app .ptype .type-title{line-height:1.28;margin-bottom:28px}
+#ency-partner-app .ptype .type-title .type-en{line-height:1.28}
+#ency-partner-app .ptype p{line-height:1.82;margin-top:0}
+
+/* Support: visually different from the first benefit-card section */
+#ency-partner-app .support-visual-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:42px
+}
+#ency-partner-app .support-visual{
+  min-height:275px;border-radius:24px;overflow:hidden;position:relative;
+  background:linear-gradient(145deg,#e7eae8,#f7f8f7);border:1px solid #dfe2e1
+}
+#ency-partner-app .support-visual .image-slot{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:11px;color:#9aa09e;letter-spacing:.04em
+}
+#ency-partner-app .support-visual:after{
+  content:"";position:absolute;inset:38% 0 0;
+  background:linear-gradient(to top,rgba(8,12,15,.92),rgba(8,12,15,.12))
+}
+#ency-partner-app .support-visual-copy{
+  position:absolute;z-index:2;left:24px;right:24px;bottom:22px;color:#fff
+}
+#ency-partner-app .support-visual-copy .num{font-size:10px;opacity:.62;display:block;margin-bottom:9px}
+#ency-partner-app .support-visual-copy h3{font-size:20px;margin:0 0 7px;letter-spacing:-.035em}
+#ency-partner-app .support-visual-copy p{font-size:12px;line-height:1.58;color:#d7dbd9;margin:0}
+#ency-partner-app .support-row{display:none!important}
+
+/* Process: 3 + 3 snake/ㄷ flow */
+#ency-partner-app .process{
+  max-width:900px;margin:58px auto 0;display:grid;
+  grid-template-columns:repeat(3,1fr);grid-template-areas:"s1 s2 s3" "s6 s5 s4";
+  column-gap:56px;row-gap:62px;position:relative
+}
+#ency-partner-app .process:before{display:none}
+#ency-partner-app .step{padding:0;text-align:left;position:relative}
+#ency-partner-app .step:nth-child(1){grid-area:s1}#ency-partner-app .step:nth-child(2){grid-area:s2}#ency-partner-app .step:nth-child(3){grid-area:s3}
+#ency-partner-app .step:nth-child(4){grid-area:s4}#ency-partner-app .step:nth-child(5){grid-area:s5}#ency-partner-app .step:nth-child(6){grid-area:s6}
+#ency-partner-app .step b{margin:0 0 16px}
+#ency-partner-app .step strong{font-size:15px}
+#ency-partner-app .step p{font-size:12px}
+/* horizontal connectors */
+#ency-partner-app .step:nth-child(1):after, #ency-partner-app .step:nth-child(2):after, #ency-partner-app .step:nth-child(4):after, #ency-partner-app .step:nth-child(5):after{
+  content:"";position:absolute;top:19px;height:1px;background:#c9cdcc;width:56px
+}
+#ency-partner-app .step:nth-child(1):after, #ency-partner-app .step:nth-child(2):after{left:calc(100% + 0px)}
+#ency-partner-app .step:nth-child(4):after, #ency-partner-app .step:nth-child(5):after{right:calc(100% + 0px)}
+/* right-hand turn from 03 to 04 */
+#ency-partner-app .step:nth-child(3):after{
+  content:"";position:absolute;left:19px;top:40px;width:calc(100% - 19px + 28px);
+  height:62px;border-right:1px solid #c9cdcc;border-bottom:1px solid #c9cdcc;
+  border-bottom-right-radius:24px;pointer-events:none
+}
+#ency-partner-app .step:last-child b{background:linear-gradient(135deg,#01cb9b,#2d54d5)}
+#ency-partner-app .process-note{margin-top:42px}
+
+@media(max-width:900px){
+  #ency-partner-app .support-visual-grid{grid-template-columns:1fr 1fr}
+  #ency-partner-app .process{grid-template-columns:1fr;grid-template-areas:none;row-gap:24px}
+  #ency-partner-app .step:nth-child(n){grid-area:auto}
+  #ency-partner-app .step:nth-child(n):after{display:none}
+}
+@media(max-width:560px){#ency-partner-app .support-visual-grid{grid-template-columns:1fr}}
+
+/* ===== V7 polish ===== */
+#ency-partner-app .why-head .h2{line-height:1.22}
+
+/* partner CTAs */
+#ency-partner-app .ptype{display:flex;flex-direction:column}
+#ency-partner-app .ptype>div:last-of-type{flex:1}
+#ency-partner-app .partner-apply{
+  position:relative;z-index:3;margin-top:25px;display:inline-flex;align-items:center;
+  justify-content:center;align-self:flex-start;padding:11px 18px;border-radius:999px;
+  font-size:12px;font-weight:750;transition:transform .22s ease,box-shadow .22s ease,background .22s ease
+}
+#ency-partner-app .agent .partner-apply{background:#edf5ff;color:#1f70da}
+#ency-partner-app .reseller .partner-apply{background:#eafaf5;color:#078d6a}
+#ency-partner-app .partner-apply:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.08)}
+
+/* clean snake process: connectors live in grid gaps only */
+#ency-partner-app .process{column-gap:70px;row-gap:64px}
+#ency-partner-app .step:nth-child(n):after{display:none!important}
+#ency-partner-app .step:nth-child(1):before, #ency-partner-app .step:nth-child(2):before, #ency-partner-app .step:nth-child(4):before, #ency-partner-app .step:nth-child(5):before{
+  content:"";position:absolute;top:19px;width:70px;height:1px;background:#c9cdcc
+}
+#ency-partner-app .step:nth-child(1):before, #ency-partner-app .step:nth-child(2):before{left:100%}
+#ency-partner-app .step:nth-child(4):before, #ency-partner-app .step:nth-child(5):before{right:100%}
+#ency-partner-app .step:nth-child(3) .turn-line{
+  position:absolute;left:40px;top:19px;width:calc(100% + 70px);height:calc(100% + 64px);
+  border-top:1px solid transparent;border-right:1px solid #c9cdcc;border-bottom:1px solid #c9cdcc;
+  border-bottom-right-radius:26px;pointer-events:none
+}
+
+/* subtle hover only — no scroll/reveal animation */
+#ency-partner-app .dealer-benefit, #ency-partner-app .support-visual, #ency-partner-app .ptype, #ency-partner-app .product-link, #ency-partner-app .flow span, #ency-partner-app .btn{
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,filter .22s ease
+}
+#ency-partner-app .dealer-benefit:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,25,30,.055);border-color:#cfd5d3}
+#ency-partner-app .support-visual:hover{transform:translateY(-3px);box-shadow:0 13px 28px rgba(15,25,30,.09)}
+#ency-partner-app .support-visual:hover .image-slot{transform:scale(1.015)}
+#ency-partner-app .support-visual .image-slot{transition:transform .35s ease}
+#ency-partner-app .ptype:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,.12)}
+#ency-partner-app .flow span:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(15,25,30,.06)}
+#ency-partner-app .product-link:hover{transform:translateY(-1px)}
+#ency-partner-app .btn:hover{transform:translateY(-2px)}
+@media(prefers-reduced-motion:reduce){
+  #ency-partner-app .dealer-benefit, #ency-partner-app .support-visual, #ency-partner-app .ptype, #ency-partner-app .product-link, #ency-partner-app .flow span, #ency-partner-app .btn, #ency-partner-app .partner-apply, #ency-partner-app .support-visual .image-slot{transition:none!important}
+}
+@media(max-width:900px){
+  #ency-partner-app .step:nth-child(n):before, #ency-partner-app .step:nth-child(3) .turn-line{display:none!important}
+}
+
+/* ===== V8 ===== */
+#ency-partner-app .product-copy .h2{font-weight:400}#ency-partner-app .product-copy .h2 .grad{font-weight:430}
+
+/* Process: remove decorative connector geometry completely.
+   Direction is expressed by row order, eliminating broken/overflowing lines. */
+#ency-partner-app .process{column-gap:46px;row-gap:44px}
+#ency-partner-app .step:nth-child(n):before, #ency-partner-app .step:nth-child(n):after, #ency-partner-app .turn-line{display:none!important}
+#ency-partner-app .step{
+  border-top:1px solid #d7dad9;padding-top:18px;min-height:135px
+}
+#ency-partner-app .step:nth-child(3), #ency-partner-app .step:nth-child(4){border-color:#bfc6c3}
+#ency-partner-app .step b{margin-top:-39px;background:#111;position:relative;z-index:2}
+#ency-partner-app .step:last-child{border-top-color:#75cfc2}
+
+/* Form required + privacy */
+#ency-partner-app .form label .req{color:#2d54d5;font-weight:800;margin-left:3px}
+#ency-partner-app .privacy-consent{
+  grid-column:1/-1;background:#f7f8f7;border:1px solid #e0e2e1;border-radius:14px;
+  padding:14px 16px;display:flex;gap:10px;align-items:flex-start
+}
+#ency-partner-app .privacy-consent input{width:17px;height:17px;margin-top:2px;accent-color:#2d54d5;flex:0 0 auto}
+#ency-partner-app .privacy-consent label{font-size:12px;line-height:1.55;color:#555d60;margin:0}
+#ency-partner-app .privacy-consent strong{color:#111}
+
+/* ===== V9: production image assets + true U-shaped process ===== */
+#ency-partner-app .support-visual .image-slot{inset:0;overflow:hidden;display:block}
+#ency-partner-app .support-visual .image-slot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+#ency-partner-app .support-visual:hover .image-slot img{transform:scale(1.018)}
+#ency-partner-app .product-grid .visual{overflow:hidden;padding:0}
+#ency-partner-app .product-grid .visual img{width:100%;height:100%;min-height:470px;object-fit:cover;display:block}
+#ency-partner-app .product-logo-slot{overflow:hidden;background:#fff!important;border:1px solid #e1e4e3!important;padding:4px!important;display:inline-grid!important;place-items:center!important}
+#ency-partner-app .product-logo-slot img{width:100%;height:100%;object-fit:contain;display:block}
+
+#ency-partner-app .process{max-width:900px;margin:66px auto 0;display:grid;grid-template-columns:repeat(3,1fr);grid-template-areas:"s1 s2 s3" "s6 s5 s4";column-gap:70px;row-gap:86px;position:relative;padding:0 0 2px}
+#ency-partner-app .process .process-path{position:absolute;left:0;top:0;width:100%;height:calc(100% - 1px);overflow:visible;z-index:0;pointer-events:none}
+#ency-partner-app .process .process-path path{fill:none;stroke:#c9cdcc;stroke-width:1.2;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}
+#ency-partner-app .process .step{position:relative;z-index:1;border:0!important;padding-top:0;min-height:150px;background:transparent;text-align:left}
+#ency-partner-app .process .step:nth-of-type(1){grid-area:s1}#ency-partner-app .process .step:nth-of-type(2){grid-area:s2}#ency-partner-app .process .step:nth-of-type(3){grid-area:s3}#ency-partner-app .process .step:nth-of-type(4){grid-area:s4}#ency-partner-app .process .step:nth-of-type(5){grid-area:s5}#ency-partner-app .process .step:nth-of-type(6){grid-area:s6}
+#ency-partner-app .process .step b{margin:0 0 18px!important;width:40px;height:40px;background:#111;box-shadow:0 0 0 10px #f5f5f3;position:relative;z-index:3}
+#ency-partner-app .process .step:last-of-type b{background:linear-gradient(135deg,#01cb9b,#2d54d5)}
+#ency-partner-app .process .step:nth-of-type(2) b, #ency-partner-app .process .step:nth-of-type(5) b{margin-left:auto!important;margin-right:auto!important}
+#ency-partner-app .process .step:nth-of-type(3) b, #ency-partner-app .process .step:nth-of-type(4) b{margin-left:auto!important}
+#ency-partner-app .process .step:nth-of-type(2), #ency-partner-app .process .step:nth-of-type(5){text-align:center}
+#ency-partner-app .process .step:nth-of-type(3), #ency-partner-app .process .step:nth-of-type(4){text-align:right}
+@media(max-width:900px){#ency-partner-app .process{display:grid;grid-template-columns:1fr;grid-template-areas:none;row-gap:24px;margin-top:42px}#ency-partner-app .process .process-path{display:none}#ency-partner-app .process .step:nth-of-type(n){grid-area:auto;text-align:left}#ency-partner-app .process .step:nth-of-type(n) b{margin:0 0 14px!important;box-shadow:none}#ency-partner-app .product-grid .visual img{min-height:330px}}
+
+/* ===== V10: smoother image readability + corrected ㄷ process path ===== */
+#ency-partner-app .support-visual:after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to bottom,
+    rgba(7,11,14,.12) 0%,
+    rgba(7,11,14,.18) 38%,
+    rgba(7,11,14,.42) 62%,
+    rgba(7,11,14,.88) 100%);
+}
+#ency-partner-app .support-visual-copy{z-index:2;text-shadow:0 1px 2px rgba(0,0,0,.20)}
+#ency-partner-app .support-visual-copy .num{opacity:.82}
+#ency-partner-app .support-visual-copy p{color:rgba(255,255,255,.88)}
+
+/* True ㄷ flow: badges sit directly on one continuous line. */
+#ency-partner-app .process{
+  max-width:900px;margin:66px auto 0;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-areas:"s1 s2 s3" "s6 s5 s4";
+  column-gap:70px;row-gap:86px;position:relative;
+}
+#ency-partner-app .process .process-path{
+  position:absolute;left:0;top:0;width:100%;height:100%;
+  overflow:visible;z-index:0;pointer-events:none;
+}
+#ency-partner-app .process .process-path path{
+  fill:none;stroke:#c9cdcc;stroke-width:1.2;
+  vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round;
+}
+#ency-partner-app .process .step{min-height:150px}
+#ency-partner-app .process .step b{box-shadow:0 0 0 10px #f5f5f3}
+@media(max-width:900px){
+  #ency-partner-app .process .process-path{display:none}
+  #ency-partner-app .process .step b{box-shadow:none}
+}
+
+
+/* ===== V11: stronger support-card readability + explicit ㄷ directional flow ===== */
+#ency-partner-app .support-visual:after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to bottom,
+    rgba(5,8,11,.20) 0%,
+    rgba(5,8,11,.28) 32%,
+    rgba(5,8,11,.52) 58%,
+    rgba(5,8,11,.78) 76%,
+    rgba(5,8,11,.96) 100%);
+}
+#ency-partner-app .support-visual-copy{text-shadow:0 2px 5px rgba(0,0,0,.52)}
+#ency-partner-app .support-visual-copy h3{font-weight:760}
+#ency-partner-app .support-visual-copy p{color:rgba(255,255,255,.94)}
+
+/* The process line is one explicit directional path: 01 → 02 → 03 ↓ 04 → 05 → 06. */
+#ency-partner-app .process .process-path{z-index:0}
+#ency-partner-app .process .process-path .route{
+  fill:none;stroke:#c6cccf;stroke-width:1.35;vector-effect:non-scaling-stroke;
+  stroke-linecap:round;stroke-linejoin:round
+}
+#ency-partner-app .process .process-path .arrow{fill:#aeb9bf}
+#ency-partner-app .process .step b{box-shadow:0 0 0 10px #f5f5f3}
+@media(max-width:900px){#ency-partner-app .process .process-path{display:none}}
+
+
+/* ===== V12: route the 03→04 turn OUTSIDE the text column + darker image captions ===== */
+#ency-partner-app .support-visual:after{
+  background:linear-gradient(to bottom,
+    rgba(4,7,10,.28) 0%,
+    rgba(4,7,10,.38) 30%,
+    rgba(4,7,10,.62) 56%,
+    rgba(4,7,10,.86) 76%,
+    rgba(4,7,10,.985) 100%)!important;
+}
+#ency-partner-app .support-visual-copy{text-shadow:0 2px 7px rgba(0,0,0,.72)!important}
+#ency-partner-app .support-visual-copy p{color:rgba(255,255,255,.97)!important}
+/* Let the process connector extend beyond the 03/04 content edge. */
+#ency-partner-app .process{overflow:visible}
+#ency-partner-app .process .process-path{left:0!important;width:calc(100% + 64px)!important;overflow:visible!important}
+
+
+/* ===== V13: refined process connectors + mobile vertical flow + borderless product icons ===== */
+/* Desktop process: lighter hairline and smaller directional markers. */
+#ency-partner-app .process .process-path .route{stroke:#d8dcde!important;stroke-width:.9!important}
+#ency-partner-app .process .process-path .arrow{fill:#c5cbce!important;transform-box:fill-box;transform-origin:center;transform:scale(.62)}
+
+/* Product/ENCY icons: show the supplied PNG itself without a surrounding tile. */
+#ency-partner-app .product-logo-slot{
+  background:transparent!important;border:0!important;padding:0!important;
+  border-radius:0!important;box-shadow:none!important;overflow:visible!important
+}
+#ency-partner-app .product-logo-slot img{width:100%;height:100%;object-fit:contain;display:block}
+
+/* Mobile: a single vertical timeline instead of six disconnected cards. */
+@media(max-width:900px){
+  #ency-partner-app .process{
+    display:flex!important;flex-direction:column!important;gap:0!important;
+    margin-top:42px!important;padding-left:0!important;max-width:620px!important
+  }
+  #ency-partner-app .process .process-path{display:none!important}
+  #ency-partner-app .process .step:nth-of-type(n){
+    position:relative!important;display:grid!important;
+    grid-template-columns:40px minmax(0,1fr)!important;
+    grid-template-rows:auto auto!important;column-gap:18px!important;
+    min-height:112px!important;padding:0 0 28px!important;text-align:left!important
+  }
+  #ency-partner-app .process .step:nth-of-type(n):not(:last-of-type)::after{
+    content:""!important;display:block!important;position:absolute!important;
+    left:19.5px!important;top:40px!important;bottom:0!important;width:1px!important;
+    background:#d8dcde!important;z-index:0!important
+  }
+  #ency-partner-app .process .step b{
+    grid-column:1!important;grid-row:1/3!important;margin:0!important;
+    width:40px!important;height:40px!important;box-shadow:0 0 0 7px #f5f5f3!important;
+    position:relative!important;z-index:2!important
+  }
+  #ency-partner-app .process .step strong{grid-column:2!important;grid-row:1!important;margin:2px 0 7px!important;align-self:start!important}
+  #ency-partner-app .process .step p{grid-column:2!important;grid-row:2!important;margin:0!important;align-self:start!important}
+}
+
+
+
+/* ===== V14: final mobile polish ===== */
+/* Keep product logo artwork upright on mobile. The generic .flow > i arrow rotates,
+   but nested logo slots must never inherit that visual treatment. */
+@media(max-width:900px){
+  #ency-partner-app .flow span .product-logo-slot, #ency-partner-app .flow span .product-logo-slot img{
+    transform:none!important;
+    rotate:0deg!important;
+  }
+
+  /* Use a compact landscape crop for the CNC UI instead of letting the source image
+     dictate a tall mobile block. */
+  #ency-partner-app .product-grid .visual{
+    min-height:0!important;
+    height:clamp(210px,58vw,300px)!important;
+    aspect-ratio:16/9!important;
+    overflow:hidden!important;
+  }
+  #ency-partner-app .product-grid .visual img{
+    width:100%!important;height:100%!important;min-height:0!important;
+    object-fit:cover!important;object-position:center center!important;
+    transform:none!important;
+  }
+
+  /* One uninterrupted mobile timeline from 01 through 06. */
+  #ency-partner-app .process{
+    position:relative!important;
+    padding-bottom:0!important;
+  }
+  #ency-partner-app .process::before{
+    content:""!important;display:block!important;position:absolute!important;
+    left:19.5px!important;top:20px!important;bottom:92px!important;
+    width:1px!important;background:#d8dcde!important;z-index:0!important;
+  }
+  #ency-partner-app .process .step:nth-of-type(n)::after{display:none!important;content:none!important}
+  #ency-partner-app .process .step:nth-of-type(n){z-index:1!important;background:transparent!important}
+  #ency-partner-app .process .step b{background:#111!important}
+  #ency-partner-app .process .step:last-of-type b{background:linear-gradient(135deg,#01cb9b,#2d54d5)!important}
+
+  /* Give privacy copy and the primary submit CTA clear breathing room. */
+  #ency-partner-app .privacy-consent{margin-bottom:26px!important;line-height:1.7!important}
+  #ency-partner-app .privacy-consent label{line-height:1.7!important}
+  #ency-partner-app .form > .btn{margin-top:4px!important}
+}
+@media(max-width:560px){
+  #ency-partner-app .product-grid .visual{height:220px!important;aspect-ratio:auto!important}
+  #ency-partner-app .privacy-consent{margin-bottom:28px!important}
+}
+
+
+/* ===== V16: reliable mobile timeline connectors ===== */
+@media(max-width:900px){
+  /* Remove the single background rail: some mobile stacking contexts hid portions of it. */
+  #ency-partner-app .process::before{display:none!important;content:none!important}
+
+  /* Draw each connector from the bottom of one badge to the center of the next badge.
+     Because it belongs to each step, it cannot disappear behind neighboring step layers. */
+  #ency-partner-app .process .step:nth-of-type(n):not(:last-of-type)::after{
+    content:""!important;
+    display:block!important;
+    position:absolute!important;
+    left:19.5px!important;
+    top:40px!important;
+    bottom:-20px!important;
+    width:1px!important;
+    background:#d8dcde!important;
+    z-index:1!important;
+    pointer-events:none!important;
+  }
+  #ency-partner-app .process .step b{position:relative!important;z-index:3!important}
+  #ency-partner-app .process .step strong, #ency-partner-app .process .step p{position:relative!important;z-index:2!important}
+}
+
+
+/* ===== V18: continuous mobile process rail + clearer company-name guidance ===== */
+@media(max-width:900px){
+  /* A single background rail avoids per-step connector gaps on mobile. */
+  #ency-partner-app .process{
+    background-image:linear-gradient(#d8dcde,#d8dcde)!important;
+    background-repeat:no-repeat!important;
+    background-size:1px calc(100% - 40px)!important;
+    background-position:20px 20px!important;
+  }
+  #ency-partner-app .process::before{display:none!important;content:none!important}
+  #ency-partner-app .process .step:nth-of-type(n)::after{display:none!important;content:none!important}
+  #ency-partner-app .process .step{background:transparent!important}
+  #ency-partner-app .process .step b{
+    box-shadow:0 0 0 7px #f5f5f3!important;
+    position:relative!important;z-index:3!important
+  }
+}
+#ency-partner-app .company-help{display:block;margin-top:7px;font-size:12px;line-height:1.55;color:#8a9297}
+
+/* ===== V19: mobile rail end + ENCY-inspired hero depth ===== */
+@media(max-width:900px){
+  #ency-partner-app .process{
+    /* stop the continuous rail exactly at the centre of badge 06 */
+    background-size:1px calc(100% - 80px)!important;
+    background-position:20px 20px!important;
+  }
+}
+
+/* Hero inspired by ENCY product presentation: product UI as the visual anchor,
+   while keeping this page focused on partner recruitment. */
+#ency-partner-app .hero{
+  background:
+    radial-gradient(circle at 78% 42%,rgba(45,84,213,.11),transparent 30%),
+    radial-gradient(circle at 16% 70%,rgba(1,203,155,.09),transparent 27%),
+    linear-gradient(180deg,#fafbf9 0%,#f2f5f3 100%);
+}
+#ency-partner-app .hero:before{
+  width:720px!important;height:720px!important;left:78%!important;top:52%!important;bottom:auto!important;
+  transform:translate(-50%,-50%)!important;border:1px solid rgba(45,84,213,.08)!important;
+  box-shadow:0 0 0 95px rgba(1,203,155,.018),0 0 0 190px rgba(45,84,213,.014)!important;
+}
+#ency-partner-app .hero-product-ui{
+  position:absolute;z-index:1;right:-5.5%;bottom:-10%;width:min(58vw,900px);aspect-ratio:16/10;
+  border-radius:24px 24px 0 0;overflow:hidden;background:#171b1f;
+  box-shadow:0 35px 90px rgba(25,35,45,.20),0 0 0 1px rgba(255,255,255,.65);
+  transform:perspective(1400px) rotateY(-8deg) rotateX(2deg) rotateZ(-1deg);
+  transform-origin:center bottom;opacity:.92;pointer-events:none;
+}
+#ency-partner-app .hero-product-ui img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+#ency-partner-app .hero-product-ui:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(247,248,246,.24),transparent 28%,transparent 80%,rgba(45,84,213,.06))}
+#ency-partner-app .hero-inner{z-index:3}#ency-partner-app .hero-copy{max-width:1180px}
+#ency-partner-app .hero-copy:before{content:"ENCY PARTNER NETWORK";display:block;margin:0 auto 18px;font-size:11px;font-weight:750;letter-spacing:.18em;color:#7a8286}
+@media(min-width:901px){
+  #ency-partner-app .hero{text-align:left}
+  #ency-partner-app .hero-copy{margin-left:0;max-width:720px}
+  #ency-partner-app .hero .h1{font-size:clamp(43px,3.5vw,62px)}
+  #ency-partner-app .hero-sub{margin:22px 0 27px;max-width:650px;white-space:normal}
+  #ency-partner-app .hero .actions.center{justify-content:flex-start}
+  #ency-partner-app .hero-copy:before{margin-left:0}
+}
+@media(max-width:900px){
+  #ency-partner-app .hero-product-ui{right:-34%;bottom:-2%;width:105vw;opacity:.28;filter:saturate(.9)}
+  #ency-partner-app .hero-product-ui:after{background:linear-gradient(180deg,rgba(247,248,246,.52),rgba(247,248,246,.08))}
+}
+
+
+/* ===== V21: final hero refinements ===== */
+#ency-partner-app .hero-copy:before{content:none!important;display:none!important}
+#ency-partner-app .hero-lines{opacity:.48!important}
+#ency-partner-app .hero-lines .toolpath-lines path, #ency-partner-app .hero-lines .toolpath-lower path{
+  fill:none;
+  stroke:rgba(255,255,255,.48);
+  stroke-width:1.15;
+  vector-effect:non-scaling-stroke;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+#ency-partner-app .hero-lines .toolpath-lower path{stroke:rgba(255,255,255,.34);stroke-width:.95}
+@media(min-width:901px){
+  #ency-partner-app .hero-inner{padding-top:78px!important;padding-bottom:245px!important}
+  #ency-partner-app .hero .actions{margin-top:0!important;margin-bottom:52px!important}
+  #ency-partner-app .hero-showcase{bottom:-150px!important}
+}
+@media(max-width:900px){
+  #ency-partner-app .hero-lines{opacity:.38!important}
+}
+
+
+/* V15: explicit spacing between privacy consent panel and submit CTA */
+#ency-partner-app .form .privacy-consent{margin:0 0 34px 0!important;}
+#ency-partner-app .form .privacy-consent + .btn{display:inline-flex!important;margin-top:0!important;}
+@media(max-width:560px){
+  #ency-partner-app .form .privacy-consent{margin-bottom:30px!important;}
+}
+
+/* ===== V19: mobile rail end + ENCY-inspired hero depth ===== */
+@media(max-width:900px){
+  #ency-partner-app .process{
+    /* stop the continuous rail exactly at the centre of badge 06 */
+    background-size:1px calc(100% - 80px)!important;
+    background-position:20px 20px!important;
+  }
+}
+
+/* Hero inspired by ENCY product presentation: product UI as the visual anchor,
+   while keeping this page focused on partner recruitment. */
+#ency-partner-app .hero{
+  background:
+    radial-gradient(circle at 78% 42%,rgba(45,84,213,.11),transparent 30%),
+    radial-gradient(circle at 16% 70%,rgba(1,203,155,.09),transparent 27%),
+    linear-gradient(180deg,#fafbf9 0%,#f2f5f3 100%);
+}
+#ency-partner-app .hero:before{
+  width:720px!important;height:720px!important;left:78%!important;top:52%!important;bottom:auto!important;
+  transform:translate(-50%,-50%)!important;border:1px solid rgba(45,84,213,.08)!important;
+  box-shadow:0 0 0 95px rgba(1,203,155,.018),0 0 0 190px rgba(45,84,213,.014)!important;
+}
+#ency-partner-app .hero-product-ui{
+  position:absolute;z-index:1;right:-5.5%;bottom:-10%;width:min(58vw,900px);aspect-ratio:16/10;
+  border-radius:24px 24px 0 0;overflow:hidden;background:#171b1f;
+  box-shadow:0 35px 90px rgba(25,35,45,.20),0 0 0 1px rgba(255,255,255,.65);
+  transform:perspective(1400px) rotateY(-8deg) rotateX(2deg) rotateZ(-1deg);
+  transform-origin:center bottom;opacity:.92;pointer-events:none;
+}
+#ency-partner-app .hero-product-ui img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+#ency-partner-app .hero-product-ui:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(247,248,246,.24),transparent 28%,transparent 80%,rgba(45,84,213,.06))}
+#ency-partner-app .hero-inner{z-index:3}#ency-partner-app .hero-copy{max-width:1180px}
+#ency-partner-app .hero-copy:before{content:"ENCY PARTNER NETWORK";display:block;margin:0 auto 18px;font-size:11px;font-weight:750;letter-spacing:.18em;color:#7a8286}
+@media(min-width:901px){
+  #ency-partner-app .hero{text-align:left}
+  #ency-partner-app .hero-copy{margin-left:0;max-width:720px}
+  #ency-partner-app .hero .h1{font-size:clamp(43px,3.5vw,62px)}
+  #ency-partner-app .hero-sub{margin:22px 0 27px;max-width:650px;white-space:normal}
+  #ency-partner-app .hero .actions.center{justify-content:flex-start}
+  #ency-partner-app .hero-copy:before{margin-left:0}
+}
+@media(max-width:900px){
+  #ency-partner-app .hero-product-ui{right:-34%;bottom:-2%;width:105vw;opacity:.28;filter:saturate(.9)}
+  #ency-partner-app .hero-product-ui:after{background:linear-gradient(180deg,rgba(247,248,246,.52),rgba(247,248,246,.08))}
+}
+
+
+/* ===== V20: centered ENCY gradient hero + border-crossing CAM showcase ===== */
+#ency-partner-app .hero{
+  min-height:760px!important;
+  height:auto!important;
+  overflow:visible!important;
+  text-align:center!important;
+  background-image:linear-gradient(rgba(5,18,35,.08),rgba(5,18,35,.08)),url("https://ik.imagekit.io/smartware/ency-partner/landing-page/gradient_ency%20(1).png")!important;
+  background-size:cover!important;
+  background-position:center center!important;
+  border-bottom:0!important;
+  padding-bottom:190px!important;
+}
+#ency-partner-app .hero:before{display:none!important}
+#ency-partner-app .hero:after{display:none!important}
+#ency-partner-app .hero-lines{display:block!important;z-index:0!important;opacity:.38!important;overflow:hidden!important}
+#ency-partner-app .hero-lines svg{width:100%!important;height:100%!important}
+#ency-partner-app .hero-lines .side-art, #ency-partner-app .hero-lines .side-art-soft{stroke:rgba(255,255,255,.46)!important}
+#ency-partner-app .hero-inner{padding:88px 0 130px!important;z-index:3!important}
+#ency-partner-app .hero-copy{max-width:980px!important;margin:0 auto!important;text-align:center!important}
+#ency-partner-app .hero-copy:before{color:rgba(255,255,255,.76)!important;margin:0 auto 20px!important}
+#ency-partner-app .hero .h1, #ency-partner-app .hero .h1 .hero-light, #ency-partner-app .hero .h1 .grad{color:#fff!important;-webkit-text-fill-color:#fff!important}
+#ency-partner-app .hero .h1 .hero-light{font-weight:380!important}
+#ency-partner-app .hero-sub{color:rgba(255,255,255,.82)!important;margin:22px auto 28px!important;max-width:760px!important;white-space:normal!important}
+#ency-partner-app .hero .actions.center{justify-content:center!important}
+#ency-partner-app .hero .btn{background:#fff!important;color:#111!important;border-color:#fff!important}
+#ency-partner-app .hero .btn.secondary{background:rgba(255,255,255,.10)!important;color:#fff!important;border-color:rgba(255,255,255,.45)!important;backdrop-filter:blur(8px)}
+
+/* A single centered product frame bridges section 1 and section 2. No dots/arrows. */
+#ency-partner-app .hero-showcase{
+  position:absolute;z-index:5;left:50%;bottom:-150px;transform:translateX(-50%);
+  width:min(880px,72vw);aspect-ratio:16/9;border-radius:15px;overflow:hidden;
+  background:#15191d;box-shadow:0 30px 75px rgba(11,25,48,.28),0 0 0 1px rgba(255,255,255,.30);
+}
+#ency-partner-app .hero-slides{position:relative;width:100%;height:100%;background:#15191d}
+#ency-partner-app .hero-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;animation:encyHeroFade 16s infinite ease-in-out;will-change:opacity}
+#ency-partner-app .hero-slide.s1{animation-delay:0s}#ency-partner-app .hero-slide.s2{animation-delay:4s}#ency-partner-app .hero-slide.s3{animation-delay:8s}#ency-partner-app .hero-slide.s4{animation-delay:12s}
+@keyframes encyHeroFade{0%{opacity:0}5%{opacity:1}25%{opacity:1}30%{opacity:0}100%{opacity:0}}
+#ency-partner-app .why{padding-top:245px!important}
+
+@media(max-width:900px){
+  #ency-partner-app .hero{min-height:660px!important;padding-bottom:115px!important;background-position:center center!important}
+  #ency-partner-app .hero-inner{padding:74px 0 100px!important}
+  #ency-partner-app .hero-showcase{bottom:-92px;width:calc(100% - 34px);border-radius:11px}
+  #ency-partner-app .why{padding-top:165px!important}
+  #ency-partner-app .hero-lines{opacity:.30!important}
+}
+@media(max-width:560px){
+  #ency-partner-app .hero{min-height:610px!important;padding-bottom:90px!important}
+  #ency-partner-app .hero-inner{padding:64px 0 86px!important}
+  #ency-partner-app .hero-showcase{bottom:-64px;width:calc(100% - 28px);border-radius:9px}
+  #ency-partner-app .why{padding-top:130px!important}
+  #ency-partner-app .hero .h1{font-size:36px!important}
+  #ency-partner-app .hero-sub{font-size:14px!important;line-height:1.7!important}
+}
+@media(prefers-reduced-motion:reduce){
+  #ency-partner-app .hero-slide{animation:none!important;opacity:0!important}
+  #ency-partner-app .hero-slide.s1{opacity:1!important}
+}
+
+
+#ency-partner-app #partnerSubmitButton:disabled{pointer-events:none}
+#ency-partner-app #partnerSubmitStatus:empty{display:none}
+#ency-partner-app .submit-status{margin-top:18px;padding:15px 18px;border-radius:14px;font-size:13px;line-height:1.65;font-weight:650}
+#ency-partner-app .submit-status.success{display:block;background:#f0faf7;border:1px solid #c8ebe1;color:#11634f}
+#ency-partner-app .submit-status.error{display:block;background:#fff5f5;border:1px solid #f1cccc;color:#a32d2d}
+
+/* Equipment-partner subpage entry — added after partner type section */
+#ency-partner-app .equipment-entry{background:#fff;padding:72px 0 78px}
+#ency-partner-app .equipment-entry-card{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(230px,.72fr) auto;align-items:center;gap:34px;min-height:220px;padding:38px 38px 38px 42px;border:1px solid #e4e7e8;border-radius:26px;background:#f7f8f7;box-shadow:0 12px 36px rgba(16,24,40,.055)}
+#ency-partner-app .equipment-entry-card:before{content:"";position:absolute;right:8%;top:-190px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(1,203,155,.16) 0%,rgba(45,84,213,.10) 42%,rgba(255,255,255,0) 72%);pointer-events:none}
+#ency-partner-app .equipment-entry-copy{position:relative;z-index:2;max-width:690px}
+#ency-partner-app .equipment-entry h2{margin:0;font-size:clamp(25px,2.5vw,36px);line-height:1.22;letter-spacing:-.045em;color:#111}
+#ency-partner-app .equipment-entry p{margin:14px 0 0;color:#687176;font-size:14px;line-height:1.72}
+#ency-partner-app .equipment-entry-target{display:block;margin-top:11px;color:#8a9296;font-size:12px}
+#ency-partner-app .equipment-entry-visual{position:relative;z-index:1;align-self:stretch;min-width:230px;min-height:144px}
+#ency-partner-app .equipment-entry-visual img{position:absolute;display:block;max-width:none;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(20,34,45,.10));pointer-events:none}
+#ency-partner-app .equipment-cnc{width:190px;height:160px;left:0;bottom:1px}
+#ency-partner-app .equipment-robot{width:132px;height:154px;right:0;bottom:0}
+#ency-partner-app .equipment-entry-btn{position:relative;z-index:2;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border-radius:999px;background:#111;color:#fff;text-decoration:none;font-size:14px;font-weight:760;white-space:nowrap;transition:transform .2s ease,box-shadow .2s ease}
+#ency-partner-app .equipment-entry-btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,0,0,.12)}
+@media(max-width:1100px){#ency-partner-app .equipment-entry-card{grid-template-columns:minmax(0,1fr) 210px;gap:26px}#ency-partner-app .equipment-entry-btn{grid-column:1/-1;width:max-content}#ency-partner-app .equipment-entry-visual{min-width:210px}#ency-partner-app .equipment-cnc{width:170px}#ency-partner-app .equipment-robot{width:116px}}
+@media(max-width:700px){#ency-partner-app .equipment-entry{padding:50px 0 56px}#ency-partner-app .equipment-entry-card{display:flex;align-items:flex-start;flex-direction:column;gap:22px;min-height:0;padding:30px 24px}#ency-partner-app .equipment-entry-visual{width:100%;min-width:0;height:150px;min-height:150px;margin-top:-2px}#ency-partner-app .equipment-cnc{width:170px;height:145px;left:calc(50% - 150px)}#ency-partner-app .equipment-robot{width:112px;height:140px;right:calc(50% - 145px)}#ency-partner-app .equipment-entry-btn{width:100%}}
+@media(prefers-reduced-motion:reduce){#ency-partner-app .equipment-entry-btn{transition:none!important}}
