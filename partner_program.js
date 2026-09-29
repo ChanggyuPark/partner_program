@@ -9,7 +9,8 @@
     activePage: '#page2762294.page-opened',
     appId: 'ency-partner-app',
     detectIntervalMs: 250,
-    detectTimeoutMs: 15000
+    detectTimeoutMs: 15000,
+    targetPath: '/partner_program'
   };
 
   const LANDING_HTML = `<main>
@@ -219,23 +220,37 @@
   let initialized = false;
   let hostObserver = null;
 
+  function normalizePath(path){
+    const p = String(path || '/').replace(/\/+$/, '');
+    return p || '/';
+  }
+
+  function isTargetRoute(){
+    return normalizePath(window.location.pathname) === normalizePath(CONFIG.targetPath);
+  }
+
   function getTargetPage(){
-    return document.querySelector(CONFIG.activePage);
+    if(!isTargetRoute()) return null;
+    return document.querySelector(CONFIG.page);
   }
 
   function targetExists(){
-    return !!getTargetPage();
+    return isTargetRoute() && !!getTargetPage();
   }
 
   function restoreInactiveTarget(){
+    const onTarget = isTargetRoute();
+    document.documentElement.classList.toggle('ency-partner-route', onTarget);
+
     const page = document.querySelector(CONFIG.page);
-    if(page && !page.matches('.page-opened')){
+    if(page && !onTarget){
       page.style.removeProperty('display');
       page.removeAttribute('aria-hidden');
       page.removeAttribute('data-ency-original-display');
     }
+
     const app = document.getElementById(CONFIG.appId);
-    if(app && !targetExists()){
+    if(app && !onTarget){
       app.remove();
       initialized = false;
     }
@@ -244,7 +259,7 @@
   // Hide only the placeholder Sixshop page content.
   // The site's existing header/navigation and footer are intentionally untouched.
   function hideTargetPage(page){
-    if(!page) return;
+    if(!page || !isTargetRoute()) return;
     if(!page.hasAttribute('data-ency-original-display')){
       page.setAttribute('data-ency-original-display', page.style.display || '');
     }
@@ -257,6 +272,8 @@
   function keepTargetHidden(){
     if(hostObserver) return;
     hostObserver = new MutationObserver(function(){
+      restoreInactiveTarget();
+      if(!isTargetRoute()) return;
       const page = getTargetPage();
       if(page){
         hideTargetPage(page);
@@ -274,6 +291,7 @@
   function initLanding(){
     if(initialized || !targetExists() || !document.body) return false;
     initialized = true;
+    document.documentElement.classList.add('ency-partner-route');
 
     const page = getTargetPage();
     if(!page) return false;
@@ -379,6 +397,14 @@
 
     return true;
   }
+
+  // Sixshop may change routes without a full page reload. Reconcile on every URL change.
+  const _pushState = history.pushState;
+  const _replaceState = history.replaceState;
+  function routeChanged(){ setTimeout(function(){ restoreInactiveTarget(); initLanding(); }, 0); }
+  history.pushState = function(){ const r = _pushState.apply(this, arguments); routeChanged(); return r; };
+  history.replaceState = function(){ const r = _replaceState.apply(this, arguments); routeChanged(); return r; };
+  window.addEventListener('popstate', routeChanged);
 
   function startDetection(){
     // Keep a lightweight lifecycle observer because Sixshop can navigate without a full reload.
