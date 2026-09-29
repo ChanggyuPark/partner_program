@@ -785,3 +785,9 @@
 @media(max-width:1100px){#ency-partner-app .equipment-entry-card{grid-template-columns:minmax(0,1fr) 210px;gap:26px}#ency-partner-app .equipment-entry-btn{grid-column:1/-1;width:max-content}#ency-partner-app .equipment-entry-visual{min-width:210px}#ency-partner-app .equipment-cnc{width:170px}#ency-partner-app .equipment-robot{width:116px}}
 @media(max-width:700px){#ency-partner-app .equipment-entry{padding:50px 0 56px}#ency-partner-app .equipment-entry-card{display:flex;align-items:flex-start;flex-direction:column;gap:22px;min-height:0;padding:30px 24px}#ency-partner-app .equipment-entry-visual{width:100%;min-width:0;height:150px;min-height:150px;margin-top:-2px}#ency-partner-app .equipment-cnc{width:170px;height:145px;left:calc(50% - 150px)}#ency-partner-app .equipment-robot{width:112px;height:140px;right:calc(50% - 145px)}#ency-partner-app .equipment-entry-btn{width:100%}}
 @media(prefers-reduced-motion:reduce){#ency-partner-app .equipment-entry-btn{transition:none!important}}
+
+
+/* Sixshop general-page integration: only the dedicated page placeholder is hidden.
+   Existing Sixshop header/navigation and footer remain untouched. */
+#page2762294[data-ency-original-display] { display: none !important; }
+#ency-partner-app { position: relative; width: 100%; z-index: 0; }
