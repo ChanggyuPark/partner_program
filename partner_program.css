@@ -40,12 +40,11 @@
 /* APPLY */
 #ency-partner-app .apply{padding-top:92px}#ency-partner-app .apply-head{text-align:center;max-width:980px;margin:0 auto 42px}#ency-partner-app .apply-head .h2{white-space:nowrap;font-size:clamp(36px,3.3vw,54px)}#ency-partner-app .apply-head .desc{margin:16px auto 0}#ency-partner-app .form-wrap{max-width:900px;margin:auto}#ency-partner-app .form{background:#fff;border:1px solid #e0e1e1;border-radius:28px;padding:40px}#ency-partner-app .field{margin-bottom:26px}#ency-partner-app .field label{display:block;font-size:13px;font-weight:650;margin-bottom:9px}#ency-partner-app .field input, #ency-partner-app .field textarea{width:100%;border:0;border-bottom:1px solid #cfd2d3;padding:11px 2px;background:transparent;font:inherit;outline:none}#ency-partner-app .field textarea{min-height:90px}#ency-partner-app .options{display:flex;gap:8px;flex-wrap:wrap}#ency-partner-app .options label{margin:0}#ency-partner-app .options input{display:none}#ency-partner-app .options span{display:inline-flex;padding:10px 14px;border:1px solid #cfd2d3;border-radius:999px;font-size:13px}#ency-partner-app .options input:checked+span{background:#111;color:#fff}#ency-partner-app .form button{border:0;cursor:pointer}#ency-partner-app .phone{text-align:center;margin-top:28px;color:#747a7e;font-size:13px;line-height:1.65}#ency-partner-app .phone a{display:inline-block;font-weight:750;color:#111;font-size:19px;margin-top:2px}
 
-/* FOOTER */
-#ency-partner-app .footer{background:#0c0e10;color:#fff;padding:58px 0}#ency-partner-app .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:36px}#ency-partner-app .footer h4{font-size:11px;color:#747a7e;margin:0 0 12px;text-transform:uppercase}#ency-partner-app .footer p{font-size:13px;line-height:1.75;color:#c2c5c7;margin:0}#ency-partner-app .copy{border-top:1px solid #25282a;margin-top:40px;padding-top:22px;color:#747a7e;font-size:12px}
+/* Sixshop footer is intentionally not styled by the landing. */
 
 @media(max-width:1050px){#ency-partner-app .support-row{grid-template-columns:repeat(3,1fr)}#ency-partner-app .quick-support{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){#ency-partner-app .wrap{width:min(100% - 28px,1180px)}#ency-partner-app .section{padding:72px 0}#ency-partner-app .hero{height:auto;min-height:650px}#ency-partner-app .hero-inner{padding:80px 0}#ency-partner-app .why-grid3, #ency-partner-app .partner-types, #ency-partner-app .product-grid{grid-template-columns:1fr}#ency-partner-app .support-row{grid-template-columns:1fr 1fr}#ency-partner-app .process{grid-template-columns:repeat(3,1fr);gap:34px 0}#ency-partner-app .process:before{display:none}#ency-partner-app .step b{margin-bottom:14px}#ency-partner-app .footer-grid{grid-template-columns:1fr 1fr}#ency-partner-app .apply-head .h2{white-space:normal}#ency-partner-app .flow{grid-template-columns:1fr}#ency-partner-app .flow i{text-align:center;transform:rotate(90deg)}}
-@media(max-width:560px){#ency-partner-app .h1, #ency-partner-app .hero .h1{font-size:38px}#ency-partner-app .h2{font-size:34px}#ency-partner-app .hero-sub{font-size:15px}#ency-partner-app .hero{min-height:600px}#ency-partner-app .why-grid3, #ency-partner-app .quick-support, #ency-partner-app .support-row, #ency-partner-app .process, #ency-partner-app .footer-grid{grid-template-columns:1fr}#ency-partner-app .why-card{min-height:195px}#ency-partner-app .form{padding:28px 20px}}
+@media(max-width:560px){#ency-partner-app .h1, #ency-partner-app .hero .h1{font-size:38px}#ency-partner-app .h2{font-size:34px}#ency-partner-app .hero-sub{font-size:15px}#ency-partner-app .hero{min-height:600px}#ency-partner-app .why-grid3, #ency-partner-app .quick-support, #ency-partner-app .support-row, #ency-partner-app .process#ency-partner-app .why-card{min-height:195px}#ency-partner-app .form{padding:28px 20px}}
 
 /* ===== V4 REVISED ===== */
 
@@ -789,7 +788,7 @@
 
 /* Sixshop general-page integration: only the dedicated page placeholder is hidden.
    Existing Sixshop header/navigation and footer remain untouched. */
-#page2762294.page-opened[data-ency-original-display] { display: none !important; }
+html.ency-partner-route #page2762294[data-ency-original-display] { display: none !important; }
 #ency-partner-app { position: relative; width: 100%; z-index: 0; }
 
 
