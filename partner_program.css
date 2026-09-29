@@ -789,5 +789,13 @@
 
 /* Sixshop general-page integration: only the dedicated page placeholder is hidden.
    Existing Sixshop header/navigation and footer remain untouched. */
-#page2762294[data-ency-original-display] { display: none !important; }
+#page2762294.page-opened[data-ency-original-display] { display: none !important; }
 #ency-partner-app { position: relative; width: 100%; z-index: 0; }
+
+
+/* Final: support heading — single line and centered on desktop */
+#ency-partner-app #support .support-head{max-width:none;text-align:center;margin-left:auto;margin-right:auto;}
+#ency-partner-app #support .support-head .h2{white-space:nowrap;}
+@media(max-width:900px){
+  #ency-partner-app #support .support-head .h2{white-space:normal;}
+}
