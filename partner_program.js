@@ -4,10 +4,8 @@
   'use strict';
 
   const CONFIG = {
-    sectionWrapper: '#sectionWrapper00000000',
-    section: '#section00000000',
-    item: '#item00000000',
-    itemElement: '#itemElement00000000',
+    // Sixshop general page marker. This loader runs only on this page.
+    page: '#page2762294',
     appId: 'ency-partner-app',
     detectIntervalMs: 250,
     detectTimeoutMs: 15000
@@ -17,48 +15,57 @@
   let initialized = false;
   let hostObserver = null;
 
+  function getTargetPage(){
+    return document.querySelector(CONFIG.page);
+  }
+
   function targetExists(){
-    return !!(
-      document.querySelector(CONFIG.sectionWrapper) &&
-      document.querySelector(CONFIG.section) &&
-      document.querySelector(CONFIG.item) &&
-      document.querySelector(CONFIG.itemElement)
-    );
+    return !!getTargetPage();
   }
 
-  function hideSixshopChrome(app){
-    Array.from(document.body.children).forEach(function(el){
-      if(el === app || el.tagName === 'SCRIPT' || el.tagName === 'STYLE') return;
-      if(!el.hasAttribute('data-ency-original-display')){
-        el.setAttribute('data-ency-original-display', el.style.display || '');
-      }
-      el.style.setProperty('display','none','important');
-    });
+  // Hide only the placeholder Sixshop page content.
+  // The site's existing header/navigation and footer are intentionally untouched.
+  function hideTargetPage(page){
+    if(!page) return;
+    if(!page.hasAttribute('data-ency-original-display')){
+      page.setAttribute('data-ency-original-display', page.style.display || '');
+    }
+    page.style.setProperty('display','none','important');
+    page.setAttribute('aria-hidden','true');
   }
 
-  function keepHostHidden(app){
+  // Sixshop may rerender the page node after load. Keep only this target page hidden
+  // and never touch the global header/footer or other pages.
+  function keepTargetHidden(){
     if(hostObserver) return;
     hostObserver = new MutationObserver(function(){
-      if(!document.body.contains(app)) return;
-      hideSixshopChrome(app);
+      const page = getTargetPage();
+      if(page) hideTargetPage(page);
     });
-    hostObserver.observe(document.body, {childList:true});
+    hostObserver.observe(document.documentElement, {childList:true, subtree:true});
   }
 
   function initLanding(){
     if(initialized || !targetExists() || !document.body) return false;
     initialized = true;
 
+    const page = getTargetPage();
+    if(!page) return false;
+
     let app = document.getElementById(CONFIG.appId);
     if(!app){
       app = document.createElement('div');
       app.id = CONFIG.appId;
       app.innerHTML = LANDING_HTML;
-      document.body.prepend(app);
+
+      // Insert as a sibling of the Sixshop page, never inside section/itemElement.
+      // This keeps Sixshop's existing header and footer in place while protecting
+      // the landing from delayed section rerenders.
+      page.parentNode.insertBefore(app, page);
     }
 
-    hideSixshopChrome(app);
-    keepHostHidden(app);
+    hideTargetPage(page);
+    keepTargetHidden();
 
     // Smooth in-page anchors, isolated to the landing root.
     app.addEventListener('click', function(e){
