@@ -107,7 +107,7 @@
         <img class=\"equipment-cnc\" src=\"https://ik.imagekit.io/smartware/ency-partner/landing-page/smartware-cnc.png\" alt=\"\" loading=\"lazy\"/>
         <img class=\"equipment-robot\" src=\"https://ik.imagekit.io/smartware/ency-partner/landing-page/smartware-robot.png\" alt=\"\" loading=\"lazy\"/>
       </div>
-      <a class=\"equipment-entry-btn\" href=\"ency_equipment_partner.html\">장비사 전용 프로그램 보기 →</a>
+      <a class=\"equipment-entry-btn\" href=\"equipment_partner\">장비사 전용 프로그램 보기 →</a>
     </div>
   </div>
 </section>
