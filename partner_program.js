@@ -43,8 +43,8 @@
 </div>
 <div class=\"wrap hero-inner\">
 <div class=\"hero-copy\">
-<h1 class=\"h1\"><span class=\"hero-light\">본업은 그대로.</span><br/><span class=\"grad\">새로운 수익 기회는 ENCY로.</span></h1>
-<p class=\"hero-sub\">제조업 고객을 만나고 있다면, 이제 ENCY를 제안하세요.<br/>고객을 소개하고 계약이 성사되면 약정된 영업 수수료를 받을 수 있습니다.</p>
+<h1 class=\"h1\"><span class=\"hero-light\">제조업 고객을 만나고 있다면,</span><br/><span class=\"grad\">이제 ENCY를 제안하세요.</span></h1>
+<p class=\"hero-sub\">공작기계·CAD/CAM·산업 소프트웨어·자동화 등 제조 현장에서 쌓은 고객 네트워크를<br/>ENCY와 새로운 비즈니스로 연결하세요.</p>
 <div class=\"actions center\">
 <a class=\"btn\" href=\"#apply\">ENCY 공식 파트너 등록 신청</a>
 <a class=\"btn secondary\" href=\"#support\">지원내용 보기</a>
@@ -66,7 +66,7 @@
 </section>
 <section class=\"section role\">
 <div class=\"wrap\">
-<div class=\"role-head\"><h2 class=\"h2\">개인은 <span style=\"color:#56a1ff\">에이전트</span>로, 사업자는 <span style=\"color:#29d5a2\">리셀러</span>로</h2></div>
+<div class=\"role-head\"><h2 class=\"h2\">나에게 맞는 방식으로,<br/><span class=\"grad\">ENCY 파트너가 되어보세요.</span></h2></div>
 <div class=\"partner-types\">
 <div class=\"ptype agent\">
 <span class=\"type-badge\">AGENT</span>
@@ -92,6 +92,18 @@
 </ul>
 </div>
 <a class=\"partner-apply\" href=\"#apply\">파트너 신청하기</a></div>
+<div class=\"ptype equipment\">
+<span class=\"type-badge\">EQUIPMENT PARTNER</span>
+<div class=\"type-title\">장비사 파트너</div>
+<div>
+<p>공작기계·로봇 등 제조 장비를 판매하는 기업을 위한 파트너 프로그램입니다. 기존 고객과 신규 장비 영업에 ENCY를 함께 제안할 수 있습니다.</p>
+<ul class=\"type-list\">
+<li>CNC · MCT · 5축 · 턴밀 장비사</li>
+<li>로봇 · 자동화 장비사</li>
+<li>장비와 CAM을 함께 제안하려는 기업</li>
+</ul>
+</div>
+<a class=\"partner-apply\" href=\"https://www.encycadcam.co.kr/equipment_partner\" target=\"_blank\" rel=\"noopener\">장비사 파트너 자세히 보기 →</a></div>
 </div>
 </div>
 </section>
@@ -107,7 +119,7 @@
         <img class=\"equipment-cnc\" src=\"https://ik.imagekit.io/smartware/ency-partner/landing-page/smartware-cnc.png\" alt=\"\" loading=\"lazy\"/>
         <img class=\"equipment-robot\" src=\"https://ik.imagekit.io/smartware/ency-partner/landing-page/smartware-robot.png\" alt=\"\" loading=\"lazy\"/>
       </div>
-      <a class=\"equipment-entry-btn\" href=\"equipment_partner\">장비사 전용 프로그램 보기 →</a>
+      <a class=\"equipment-entry-btn\" href=\"https://www.encycadcam.co.kr/equipment_partner\" target=\"_blank\" rel=\"noopener\">장비사 전용 프로그램 보기 →</a>
     </div>
   </div>
 </section>
@@ -198,7 +210,7 @@
 <div class=\"field\"><label>이름 *</label><input name=\"name\" placeholder=\"이름을 입력해주세요\" required=\"required\"/></div>
 <div class=\"field\"><label>연락처 *</label><input name=\"phone\" id=\"partnerPhone\" inputmode=\"numeric\" autocomplete=\"tel\" maxlength=\"13\" placeholder=\"010-0000-0000\" required=\"required\"/></div>
 <div class=\"field\"><label>이메일 *</label><input name=\"email\" placeholder=\"email@example.com\" required=\"required\" type=\"email\"/></div>
-<div class=\"field\"><label>파트너 유형 *</label><div class=\"options\"><label><input name=\"partner_type\" required=\"required\" type=\"radio\" value=\"개인 파트너\"/><span>개인 파트너</span></label><label><input name=\"partner_type\" required=\"required\" type=\"radio\" value=\"사업자 파트너\"/><span>사업자 파트너</span></label></div></div>
+<div class=\"field\"><label>파트너 유형 *</label><div class=\"options\"><label><input name=\"partner_type\" required=\"required\" type=\"radio\" value=\"개인 파트너\"/><span>개인 파트너</span></label><label><input name=\"partner_type\" required=\"required\" type=\"radio\" value=\"사업자 파트너\"/><span>사업자 파트너</span></label><label><input name=\"partner_type\" required=\"required\" type=\"radio\" value=\"장비사 파트너\"/><span>장비사 파트너</span></label></div></div>
 <div class=\"field\"><label>회사명<span class=\"req\">*</span></label><input name=\"company\" placeholder=\"회사명을 입력해주세요\" required=\"required\"/><small class=\"company-help\">개인 파트너인 경우 ‘개인’으로 입력해주세요.</small></div>
 <div class=\"field\"><label>주요 활동 지역<span class=\"req\">*</span></label><input name=\"region\" placeholder=\"예: 서울 · 경기\" required=\"required\"/></div>
 <div class=\"field\"><label>현재 업종 · 직무<span class=\"req\">*</span></label><input name=\"job\" placeholder=\"예: 공작기계 영업\" required=\"required\"/></div>
@@ -288,7 +300,38 @@
     hostObserver.observe(document.documentElement, {childList:true, subtree:true, attributes:true, attributeFilter:['class']});
   }
 
+
+  const UTM_KEYS = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+  const UTM_STORAGE_KEY = 'ency_partner_first_utm';
+
+  function captureFirstUtm(){
+    try{
+      const params = new URLSearchParams(window.location.search);
+      const incoming = {};
+      let hasUtm = false;
+      UTM_KEYS.forEach(function(key){
+        const value = String(params.get(key)||'').trim();
+        incoming[key] = value;
+        if(value) hasUtm = true;
+      });
+      if(hasUtm && !sessionStorage.getItem(UTM_STORAGE_KEY)){
+        sessionStorage.setItem(UTM_STORAGE_KEY, JSON.stringify(incoming));
+      }
+    }catch(e){}
+  }
+  function getFirstUtm(){
+    const empty = {utm_source:'',utm_medium:'',utm_campaign:'',utm_content:'',utm_term:''};
+    try{
+      const raw = sessionStorage.getItem(UTM_STORAGE_KEY);
+      if(!raw) return empty;
+      const saved = JSON.parse(raw)||{};
+      UTM_KEYS.forEach(function(key){ empty[key] = String(saved[key]||''); });
+    }catch(e){}
+    return empty;
+  }
+
   function initLanding(){
+    captureFirstUtm();
     if(initialized || !targetExists() || !document.body) return false;
     initialized = true;
     document.documentElement.classList.add('ency-partner-route');
@@ -365,7 +408,9 @@
       customer_group:String(data.get('customer_group')||'').trim(),
       current_products:String(data.get('current_products')||'').trim(),
       inquiry:String(data.get('inquiry')||'').trim(),
-      privacy_agree:true
+      privacy_agree:true,
+      ...getFirstUtm(),
+      landing_page:'partner_program'
     };
 
     submitButton.disabled=true;
