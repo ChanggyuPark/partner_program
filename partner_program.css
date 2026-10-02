@@ -798,3 +798,12 @@ html.ency-partner-route #page2762294[data-ency-original-display] { display: none
 @media(max-width:900px){
   #ency-partner-app #support .support-head .h2{white-space:normal;}
 }
+
+
+/* ===== 2026-10-02 partner type expansion ===== */
+#ency-partner-app .partner-types{grid-template-columns:repeat(3,minmax(0,1fr))}
+#ency-partner-app .ptype.equipment{border-top:6px solid #8b6ee8}
+#ency-partner-app .ptype.equipment:after{content:"";position:absolute;width:180px;height:180px;border-radius:46% 54% 70% 30%;right:-55px;bottom:-80px;transform:rotate(25deg);background:linear-gradient(135deg,rgba(139,110,232,.08),rgba(45,84,213,.22))}
+#ency-partner-app .equipment .type-badge{background:#f2efff;color:#6b4fc7}
+#ency-partner-app .equipment .partner-apply{background:#f2efff;color:#6045bb}
+@media(max-width:900px){#ency-partner-app .partner-types{grid-template-columns:1fr}}
