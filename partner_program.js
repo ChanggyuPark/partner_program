@@ -86,8 +86,8 @@
 <div>
 <p>개인사업자 또는 법인사업자가 참여하는 판매 파트너입니다. ENCY KOREA와 공동 영업을 진행할 수 있습니다.</p>
 <ul class=\"type-list\">
-<li>CNC · MCT · 5축 · 턴밀 장비 유통사</li>
 <li>CAD/CAM · MES · ERP 솔루션 기업</li>
+<li>CNC · MCT · 5축 · 턴밀 장비 유통사</li>
 <li>교육기관 · 협회 · 제조 컨설팅사</li>
 </ul>
 </div>
