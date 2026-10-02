@@ -807,3 +807,10 @@ html.ency-partner-route #page2762294[data-ency-original-display] { display: none
 #ency-partner-app .equipment .type-badge{background:#f2efff;color:#6b4fc7}
 #ency-partner-app .equipment .partner-apply{background:#f2efff;color:#6045bb}
 @media(max-width:900px){#ency-partner-app .partner-types{grid-template-columns:1fr}}
+
+
+/* ===== 2026-10-02 final requested refinements ===== */
+/* Hero emphasis: slightly reduce only the second-line weight. */
+#ency-partner-app .hero .h1 .grad{font-weight:620!important;}
+/* Equipment partner list marker. */
+#ency-partner-app .equipment .type-list li:before{background:#8b6ee8;}
