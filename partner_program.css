@@ -814,3 +814,7 @@ html.ency-partner-route #page2762294[data-ency-original-display] { display: none
 #ency-partner-app .hero .h1 .grad{font-weight:620!important;}
 /* Equipment partner list marker. */
 #ency-partner-app .equipment .type-list li:before{background:#8b6ee8;}
+
+/* Partner form: keep the final submit CTA visible across Sixshop/mobile styles. */
+#ency-partner-app #partnerApplicationForm > #partnerSubmitButton{display:inline-flex!important;visibility:visible!important;opacity:1;align-items:center;justify-content:center;min-height:52px;background:#111;color:#fff;position:relative;z-index:1}
+@media(max-width:560px){#ency-partner-app #partnerApplicationForm > #partnerSubmitButton{width:100%!important}}
